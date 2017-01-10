@@ -72,6 +72,13 @@ package "php70w-xml" do
 	action :install
 end
 
+template '/usr/share/nginx/html/index.html' do
+  source 'index.html'
+  owner 'root'
+  group 'root'
+  mode '0755'
+end
+
 service "php-fpm" do
   action [ :enable, :start ]
   supports :restart => true

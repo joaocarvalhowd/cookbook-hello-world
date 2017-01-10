@@ -23,6 +23,30 @@ package "nginx" do
     action :install
 end
 
+package "nginx" do
+    source "#{Chef::Config[:file_cache_path]}/nginx-1.8.0-1.el6.ngx.eotica.x86_64.rpm"
+    action :install
+end
+
+user "nginx" do
+  uid '496'
+  action :modify
+end
+
+package "php70w" do
+  action :install
+end
+
 package "php70w-fpm" do
   action :install
+end
+
+service "php-fpm" do
+  action [ :enable, :start ]
+  supports :restart => true
+end
+
+service "nginx" do
+  action [ :enable, :start ]
+  supports :restart => true
 end

@@ -8,8 +8,8 @@ package "webtatic repository" do
     action :install
 end
 
-remote_file "#{Chef::Config[:file_cache_path]}/nginx-1.8.0-1.el6.ngx.eotica.x86_64.rpm" do
-    source "https://static.eotica.com.br/infrastructure/rpm/nginx-1.8.0-1.el6.ngx.eotica.x86_64.rpm"
+remote_file "#{Chef::Config[:file_cache_path]}/nginx-1.8.0-1.el6.ngx.x86_64.rpm" do
+    source "https://nginx.org/packages/rhel/6/x86_64/RPMS/nginx-1.8.0-1.el6.ngx.x86_64.rpm"
     action :create
 end
 

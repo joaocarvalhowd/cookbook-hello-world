@@ -23,6 +23,10 @@ package "nginx" do
     action :install
 end
 
+package "git" do
+  action :install
+end
+
 user "nginx" do
   uid '496'
   action :modify

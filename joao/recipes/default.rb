@@ -32,8 +32,44 @@ package "php70w" do
   action :install
 end
 
+package "php70w-opcache" do
+  action :install
+end
+
 package "php70w-fpm" do
   action :install
+end
+
+package "php70w-common" do
+  action :install
+end
+
+package "php70w-gd" do
+  action :install
+end
+
+package "php70w-mbstring" do
+	action :install
+end
+
+package "php70w-mcrypt" do
+	action :install
+end
+
+package "php70w-mysql" do
+	action :install
+end
+
+package "php70w-pdo" do
+	action :install
+end
+
+package "php70w-imap" do
+	action :install
+end
+
+package "php70w-xml" do
+	action :install
 end
 
 service "php-fpm" do
